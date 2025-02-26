@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BIKE SHARING DATA ANALYSIS
 
 
@@ -49,3 +50,9 @@ babel.numbers==2.16.0
 ```
 streamlit run "C:\Dicoding\Bike-Sharing-DA\dashboard\adp-submission.py"
 ```
+=======
+## Run steamlit app
+```
+streamlit run dashboard.py
+```
+>>>>>>> 2b1b479a65fa82adb3fe2cf797ca9a96e3f3ccb9
