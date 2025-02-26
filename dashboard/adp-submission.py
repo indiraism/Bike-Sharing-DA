@@ -17,14 +17,15 @@ def calculate_correlation(df):
 def create_contingency_table(df, col1, col2):
     return pd.crosstab(df[col1], df[col2])
 
-all_df = pd.read_csv("all_data.csv")
+all_df = pd.read_csv("C:\\Dicoding\\Bike-Sharing-DA\\data\\all_data.csv")
+
 
 st.title("Analisis Penggunaan Sepeda")
 
 # Pilih dataset
 
-day_df = pd.read_csv("C:\My Documents\Indira\Dicoding\Submission\day.csv")
-hour_df = pd.read_csv("C:\My Documents\Indira\Dicoding\Submission\hour.csv")
+day_df = pd.read_csv("C:\Dicoding\Bike-Sharing-DA\data\day.csv")
+hour_df = pd.read_csv("C:\Dicoding\Bike-Sharing-DA\data\hour.csv")
 
 dataset = st.selectbox("Pilih dataset", ['day', 'hour'])
 
@@ -53,8 +54,8 @@ elif analysis == 'Tabel Kontingensi':
 
 def load_data():
   """Load the datasets."""
-  day_df = pd.read_csv('C:\My Documents\Indira\Dicoding\Submission\day.csv')
-  hour_df = pd.read_csv('C:\My Documents\Indira\Dicoding\Submission\hour.csv')
+  day_df = pd.read_csv('C:\Dicoding\Bike-Sharing-DA\data\day.csv')
+  hour_df = pd.read_csv('C:\Dicoding\Bike-Sharing-DA\data\hour.csv')
   return day_df, hour_df
 
 def group_and_aggregate(df, group_cols, agg_col, agg_func):
