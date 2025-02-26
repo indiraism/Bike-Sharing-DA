@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 # BIKE SHARING DATA ANALYSIS
 
 
 ## Project Overview
-This project analyzes and visualizes bicycle rental data from the Capital Bikeshare system, Washington D.C., United States, which is publicly available at http://capitalbikeshare.com/system-data.
+This project analyzes and visualizes bicycle rental data from the Capital Bikeshare system, Washington D.C., United States, which is publicly available at http://capitalbikeshare.com/system-data
 
 The Bike Sharing Dataset contains hourly and daily bike rental data from the Capital bike share system between 2011 and 2012, along with weather and seasonal information.
 
@@ -50,9 +49,4 @@ babel.numbers==2.16.0
 ```
 streamlit run "C:\Dicoding\Bike-Sharing-DA\dashboard\adp-submission.py"
 ```
-=======
-## Run steamlit app
-```
-streamlit run dashboard.py
-```
->>>>>>> 2b1b479a65fa82adb3fe2cf797ca9a96e3f3ccb9
+
