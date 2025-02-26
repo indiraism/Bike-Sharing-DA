@@ -10,6 +10,8 @@ This dataset includes two files: hour.csv (hourly aggregated bike rental data) w
 
 This dataset can be used for various tasks, including predicting the number of bike rentals based on environmental and seasonal settings, and detecting anomalies or events by monitoring bike rental data. For example, the number of bikes rented can be associated with events in the city, such as Hurricane Sandy.
 
+[Bike Sharing Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset)
+
 
 ## Setup Environment - Pipenv
 ```
