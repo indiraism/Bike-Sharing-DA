@@ -17,15 +17,15 @@ def calculate_correlation(df):
 def create_contingency_table(df, col1, col2):
     return pd.crosstab(df[col1], df[col2])
 
-all_df = pd.read_csv("C:\\Dicoding\\Bike-Sharing-DA\\data\\all_data.csv")
+orders_df = pd.read_csv('main-data.csv')
 
 
 st.title("Analisis Penggunaan Sepeda")
 
 # Pilih dataset
 
-day_df = pd.read_csv("C:\Dicoding\Bike-Sharing-DA\data\day.csv")
-hour_df = pd.read_csv("C:\Dicoding\Bike-Sharing-DA\data\hour.csv")
+day_df = pd.read_csv('dashboard/day.csv')
+hour_df = pd.read_csv('dashboard/hour.csv')
 
 dataset = st.selectbox("Pilih dataset", ['day', 'hour'])
 
