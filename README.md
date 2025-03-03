@@ -49,6 +49,6 @@ babel.numbers==2.16.0
 
 ## Run steamlit app
 ```
-streamlit run "C:\Dicoding\Bike-Sharing-DA\dashboard\adp-submission.py"
+streamlit run "dashboard/dashboard.py"
 ```
 
