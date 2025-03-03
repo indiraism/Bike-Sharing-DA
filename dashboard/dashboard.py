@@ -54,8 +54,8 @@ elif analysis == 'Tabel Kontingensi':
 
 def load_data():
   """Load the datasets."""
-  day_df = pd.read_csv('C:\Dicoding\Bike-Sharing-DA\data\day.csv')
-  hour_df = pd.read_csv('C:\Dicoding\Bike-Sharing-DA\data\hour.csv')
+  day_df = pd.read_csv('data/day.csv')
+  hour_df = pd.read_csv('data/hour.csv')
   return day_df, hour_df
 
 def group_and_aggregate(df, group_cols, agg_col, agg_func):
