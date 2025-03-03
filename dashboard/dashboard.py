@@ -17,7 +17,7 @@ def calculate_correlation(df):
 def create_contingency_table(df, col1, col2):
     return pd.crosstab(df[col1], df[col2])
 
-orders_df = pd.read_csv('main-data.csv')
+orders_df = pd.read_csv("dashboard/main-data.csv")
 
 
 st.title("Analisis Penggunaan Sepeda")
