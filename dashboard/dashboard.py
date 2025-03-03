@@ -149,7 +149,8 @@ if st.button('Tampilkan Plot', key='show_plot'):
     
 import folium
 
-df = day_df  # Or df = hour_df if that's the data you want to use
+day_df = pd.read_csv('data/day.csv')
+hour_df = pd.read_csv('data/hour.csv')  # Or df = hour_df if that's the data you want to use
 
 map_center = [37.7749, -122.4194]  # Replace with your desired center coordinates
 
