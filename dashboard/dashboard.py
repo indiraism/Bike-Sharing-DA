@@ -24,8 +24,8 @@ st.title("Analisis Penggunaan Sepeda")
 
 # Pilih dataset
 
-day_df = pd.read_csv('dashboard/day.csv')
-hour_df = pd.read_csv('dashboard/hour.csv')
+day_df = pd.read_csv(r'C:/Dicoding/Bike-Sharing-DA/data/day.csv')
+hour_df = pd.read_csv(r'C:/Dicoding/Bike-Sharing-DA/data/hour.csv')
 
 dataset = st.selectbox("Pilih dataset", ['day', 'hour'])
 
