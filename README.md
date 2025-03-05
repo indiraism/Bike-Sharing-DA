@@ -25,13 +25,11 @@ pip install -r requirements.txt
 ```
 numpy==2.2.0
 pandas==2.2.3
-matplotlib.pyplot==3.10.0
+matplotlib==3.10.0
 seaborn==0.13.2
-folium==0.19.4
 streamlit==1.41.1
-scikit-learn==1.6.1
-tensorflow==2.18.0
-babel.numbers==2.16.0
+babel==2.16.0
+folium==0.19.4
 ```
 
 ## Features
