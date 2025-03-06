@@ -99,6 +99,9 @@ if __name__ == "__main__":
   main()
   
 ## Visualisasi Data
+
+# Judul halaman
+st.title('Visualisasi Distribusi Penyewa per Musim')
   
 day_df['season'] = day_df['season'].replace({
     1: 'Musim Semi',
@@ -122,42 +125,15 @@ st.pyplot(plt)
 
 
 # Judul halaman
-st.title('Visualisasi Distribusi Penyewa per Musim')
-
-# Simulasi data (ganti dengan data Anda)
-data = {'temp': [0.1, 0.2, 0.3, ], 'cnt': [1000, 2000, 3000]}  # Pastikan panjangnya sama
-
-# Buat DataFrame
-df = pd.DataFrame(data)
-
-# Tampilkan DataFrame
-print(df)
-
-# Periksa tipe data dan tangani nilai yang hilang (jika perlu)
-print(df.info())  # Melihat informasi tentang DataFrame
-df.dropna(inplace=True)  # Menghapus baris dengan nilai hilang
-
-# Fungsi untuk membuat plot
-def plot_hubungan_suhu_penyewa(df):
-    fig, ax = plt.subplots(figsize=(8, 6))
-    sns.scatterplot(x='temp', y='cnt', data=df, ax=ax)
-    plt.title('Hubungan Suhu dan Jumlah Penyewa')
-    st.pyplot(fig)
-
-# Judul halaman
 st.title('Visualisasi Hubungan Suhu dan Jumlah Penyewa')
     
 import folium
 
-df = day_df  # Or df = hour_df if that's the data you want to use
+plt.figure(figsize=(8, 6)) # Sesuaikan ukuran gambar
+sns.scatterplot(x='temp', y='cnt', data=day_df)
+plt.title('Hubungan Suhu dan Jumlah Penyewa')
+plt.xlabel('Suhu (temp)')
+plt.ylabel('Jumlah Penyewa (cnt)')
 
-map_center = [37.7749, -122.4194]  # Replace with your desired center coordinates
-
-map = folium.Map(location=map_center, zoom_start=12)
-
-# The columns in day.csv are actually named 'temp' and 'hum' for latitude and longitude, not 'lat' and 'lng'
-for index, row in df.iterrows():
-    # Replace 'temp' and 'hum' with the actual latitude and longitude column names if different
-    folium.Marker([row['temp'], row['hum']]).add_to(map)
-
-map.save('bike_rental_locations.html')
+# Tampilkan plot di Streamlit
+st.pyplot(plt)
