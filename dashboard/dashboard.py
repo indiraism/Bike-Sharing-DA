@@ -100,25 +100,30 @@ if __name__ == "__main__":
   
 ## Visualisasi Data
   
-# Simulasi data (ganti dengan data Anda)
-data = {'season': [1, 2, 1, 3, 2, 4, 1, 3, 2, 4, 1, 2, 3, 4, 1, 2, 3, 4]}
-df = pd.DataFrame(data)
+day_df['season'] = day_df['season'].replace({
+    1: 'Musim Semi',
+    2: 'Musim Panas',
+    3: 'Musim Gugur',
+    4: 'Musim Dingin'
+})
 
-# Fungsi untuk membuat plot
-def plot_penyewa_per_musim(df):
-    fig, ax = plt.subplots(figsize=(8, 6))
-    sns.countplot(x='season', data=df, ax=ax)
-    plt.title('Distribusi Penyewa per Musim')
-    st.pyplot(fig)
+# Hitung total penyewaan per musim
+seasonal_rentals = day_df.groupby('season')['cnt'].sum().reset_index()
+
+# Buat bar chart menggunakan matplotlib
+plt.figure(figsize=(8, 6))
+sns.barplot(x='season', y='cnt', data=seasonal_rentals)
+plt.title('Total Penyewaan Sepeda per Musim')
+plt.xlabel('Musim')
+plt.ylabel('Total Penyewaan')
+
+# Tampilkan plot di Streamlit
+st.pyplot(plt)
+
 
 # Judul halaman
 st.title('Visualisasi Distribusi Penyewa per Musim')
 
-# Tombol untuk menampilkan plot
-if st.button('Tampilkan Plot'):
-    plot_penyewa_per_musim(df)
-    
-    
 # Simulasi data (ganti dengan data Anda)
 data = {'temp': [0.1, 0.2, 0.3, ], 'cnt': [1000, 2000, 3000]}  # Pastikan panjangnya sama
 
@@ -141,11 +146,6 @@ def plot_hubungan_suhu_penyewa(df):
 
 # Judul halaman
 st.title('Visualisasi Hubungan Suhu dan Jumlah Penyewa')
-
-# Tombol untuk menampilkan plot
-if st.button('Tampilkan Plot', key='show_plot'):
-    plot_hubungan_suhu_penyewa(df)
-    
     
 import folium
 
